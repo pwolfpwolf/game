@@ -3,9 +3,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
     <ProjectGuid>{0EDB0465-6680-E16C-F4DF-F4700C35AB25}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -34,61 +33,64 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.XML" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+      <HintPath>..\..\..\..\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ArmyScriptMain.cs" />
-     <Compile Include="Assets\CalculatorTest.cs" />
-     <Compile Include="Assets\JSON Tests\CSharp\Test_CSharp.cs" />
-     <Compile Include="Assets\KeepScript.cs" />
-     <Compile Include="Assets\MouseResponses.cs" />
-     <Compile Include="Assets\Scripts\ArmyScript.cs" />
-     <Compile Include="Assets\Scripts\ArmyTerrainScript.cs" />
-     <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\CastleKeepScript.cs" />
-     <Compile Include="Assets\Scripts\CastleScript.cs" />
-     <Compile Include="Assets\Scripts\DynamicWall.cs" />
-     <Compile Include="Assets\Scripts\GUIScript.cs" />
-     <Compile Include="Assets\Scripts\GridUtil.cs" />
-     <Compile Include="Assets\Scripts\GroundScript.cs" />
-     <Compile Include="Assets\Scripts\MainCameraScript.cs" />
-     <Compile Include="Assets\Scripts\NotificationsScript.cs" />
-     <Compile Include="Assets\Scripts\ObjectCache.cs" />
-     <Compile Include="Assets\Scripts\ReqResult\Globals.cs" />
-     <Compile Include="Assets\Scripts\ReqResult\TerrainMap.cs" />
-     <Compile Include="Assets\Scripts\Requester.cs" />
-     <Compile Include="Assets\Scripts\ServerObjects\Army.cs" />
-     <Compile Include="Assets\Scripts\ServerObjects\Notification.cs" />
-     <Compile Include="Assets\Scripts\ServerObjects\ServerObject.cs" />
-     <Compile Include="Assets\Scripts\ServerObjects\Town.cs" />
-     <Compile Include="Assets\Scripts\StatusUpdate.cs" />
-     <Compile Include="Assets\Scripts\TerrainScript.cs" />
-     <Compile Include="Assets\Scripts\UIScripts\ArmyNameButton.cs" />
-     <Compile Include="Assets\Scripts\UIScripts\CastleWindowScript.cs" />
-     <Compile Include="Assets\Scripts\Utils\Calculator.cs" />
-     <None Include="Assets\Medieval_Knights\Source\Shaders\Virtualware_BumpSpec.shader" />
-     <None Include="Assets\JSON Tests\TroubleShoot.txt" />
- <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>/Users/peterwolf/Documents/Game3d/Assets/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\ArmyScriptMain.cs" />
+    <Compile Include="Assets\CalculatorTest.cs" />
+    <Compile Include="Assets\JSON Tests\CSharp\Test_CSharp.cs" />
+    <Compile Include="Assets\KeepScript.cs" />
+    <Compile Include="Assets\MouseResponses.cs" />
+    <Compile Include="Assets\Scripts\ArmyScript.cs" />
+    <Compile Include="Assets\Scripts\ArmyTerrainScript.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CastleKeepScript.cs" />
+    <Compile Include="Assets\Scripts\CastleScript.cs" />
+    <Compile Include="Assets\Scripts\DynamicWall.cs" />
+    <Compile Include="Assets\Scripts\GUIScript.cs" />
+    <Compile Include="Assets\Scripts\GridUtil.cs" />
+    <Compile Include="Assets\Scripts\GroundScript.cs" />
+    <Compile Include="Assets\Scripts\MainCameraScript.cs" />
+    <Compile Include="Assets\Scripts\NotificationsScript.cs" />
+    <Compile Include="Assets\Scripts\ObjectCache.cs" />
+    <Compile Include="Assets\Scripts\ReqResult\Globals.cs" />
+    <Compile Include="Assets\Scripts\ReqResult\TerrainMap.cs" />
+    <Compile Include="Assets\Scripts\Requester.cs" />
+    <Compile Include="Assets\Scripts\ServerObjects\Army.cs" />
+    <Compile Include="Assets\Scripts\ServerObjects\Notification.cs" />
+    <Compile Include="Assets\Scripts\ServerObjects\ServerObject.cs" />
+    <Compile Include="Assets\Scripts\ServerObjects\Town.cs" />
+    <Compile Include="Assets\Scripts\StatusUpdate.cs" />
+    <Compile Include="Assets\Scripts\TerrainScript.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\ArmyNameButton.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\CastleWindowScript.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\MasterController.cs" />
+    <Compile Include="Assets\Scripts\Utils\Calculator.cs" />
+    <None Include="Assets\Medieval_Knights\Source\Shaders\Virtualware_BumpSpec.shader" />
+    <None Include="Assets\JSON Tests\TroubleShoot.txt" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\Applications\Unity\Unity.app\Contents\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>..\..\..\..\Applications\Unity\Unity.app\Contents\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets\plugins\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{A8BEDA56-BBCC-6973-B917-0F3AB48745E9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{A8BEDA56-BBCC-6973-B917-0F3AB48745E9}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -98,5 +100,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>
