@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6ef29df7664204f6aba78836605f5b83
+timeCreated: 1442071205
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - castleGO: {fileID: 100014, guid: 6dc25e116a09541748d0f2465b71850b, type: 2}
+  - armyGO: {fileID: 100000, guid: c48a8b8efa56e44808273dcbc79f252d, type: 2}
+  - mainCamera: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
