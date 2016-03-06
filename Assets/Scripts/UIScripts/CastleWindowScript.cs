@@ -3,13 +3,12 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class CastleWindowScript : MonoBehaviour {
+public class CastleWindowScript : MonoBehaviour, IGameWindow {
 
-	private static CastleWindowScript instance;
+    public  static CastleWindowScript instance { get;  set; }
 
 	public Text castleNameText;
 	public Image backgroundImage;
-	public CanvasGroup castleContainer;
 	public ArmyNameButton armyNameButton;
 	public ScrollRect scrollView;
 	public Image contentImage;
@@ -19,9 +18,14 @@ public class CastleWindowScript : MonoBehaviour {
 	public Button splitButton;
 
 	private ArmyNameButton[] buttonArray;
+    private CanvasGroup castleContainer;
 
 	void Start () {
 		instance = this;
+
+        castleContainer = GetComponent<CanvasGroup>();
+
+        this.MakeInvisable();
 	}
 
 	public static CastleWindowScript GetInstance() {
@@ -32,9 +36,13 @@ public class CastleWindowScript : MonoBehaviour {
 		this.gameObject.SetActive(true);
 	}
 
+    public void UpdateState() {
+        UpdateButtonStates();
+    }
+
 	public void Show(string name,  Army[] armyArray) {
 		//this.gameObject.SetActive(true);
-		castleContainer.alpha = 1f;
+		castleContainer.alpha = 0.5f;
 
 		castleNameText.text = name;
 
@@ -48,6 +56,7 @@ public class CastleWindowScript : MonoBehaviour {
 		for (int i=0; i < armyArray.Length; i++) {
 			ArmyNameButton anb = GameObject.Instantiate(armyNameButton);
 
+            anb.army = armyArray[i];
 			anb.GetComponentInChildren<Text>().text = armyArray[i].Name;
 			anb.transform.SetParent(contentImage.transform);
 			buttonArray[i] = anb;
@@ -57,7 +66,8 @@ public class CastleWindowScript : MonoBehaviour {
 	}
 
 	public void MakeInvisable() {
-		castleContainer.alpha = 0f;
+		
+        instance.castleContainer.alpha = 0f;
 
 		contentImage.transform.DetachChildren();
 	}
@@ -94,4 +104,31 @@ public class CastleWindowScript : MonoBehaviour {
 			}
 		}
 	}
+
+    /** 
+     * This assumes there is only one army selected 
+     **/
+
+    private Army getSelectedArmy() {
+        foreach (ArmyNameButton armyNameButton in buttonArray) {
+            if (armyNameButton.ButtonSelected) {
+                return armyNameButton.army;
+            }
+        }
+
+        return null;
+    }
+
+    public void clickSallyForth() {
+        
+        Debug.Log("sally forth pressed");
+
+        Army army = instance.getSelectedArmy();
+
+        MasterController.startPlotting(army);
+
+        ArmyDetailWindow.instance.showWindow(army);
+
+        instance.MakeInvisable();
+    }
 }

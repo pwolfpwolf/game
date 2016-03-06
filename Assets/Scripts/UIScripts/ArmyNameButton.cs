@@ -9,6 +9,11 @@ public class ArmyNameButton : MonoBehaviour {
 	private Button button;
 	private bool buttonSelected = false;
 
+
+    public Army army { get;  set; }
+    public Unit unit { get;  set; }
+    public IGameWindow parentWindow  { get;  set; }
+
 	void Start () {
 		button = GetComponent<Button>();
 		normalColor = button.colors.normalColor;
@@ -29,7 +34,7 @@ public class ArmyNameButton : MonoBehaviour {
 			GetComponent<Image>().color = pressedColor;
 		}
 
-		CastleWindowScript.GetInstance().UpdateButtonStates();
+        parentWindow.UpdateState();
 	}
 
 	public bool ButtonSelected

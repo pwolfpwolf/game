@@ -7,8 +7,11 @@ public class Army : ServerObject {
 	private string state;
 	private int numberOfMen;
 	private string path;
+
+    // this is the path from the server of already saved movement
 	private List<Vector3> plotPath;
-	private GameObject castleGameObject;
+	
+    private GameObject castleGameObject;
 	private int playerId;
 	private float rotation = 90;
 

@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * This is a utility for mapping the position of game object on the plain,
+ * to the backend coordinates
+ * */
+
 public class GridUtil  {
 
 	private Plane groundPlane; // this needs to change to the uneven terrain at some point

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 public class GUIScript : MonoBehaviour {
 
@@ -256,6 +257,7 @@ public class GUIScript : MonoBehaviour {
 
 	//-----------------------------------------------------------------------------------------------
 
+    [System.Obsolete("Moved to MasterController")]
 	private void renderPlotList() {
 
 		this.plotLineVisible = true;
@@ -312,7 +314,7 @@ public class GUIScript : MonoBehaviour {
 	}
 
 	//-----------------------------------------------------------------------------------------------
-
+    // this one is used
 
 	private void checkIfClickedOnSomething() {
 		RaycastHit hit;
@@ -322,8 +324,9 @@ public class GUIScript : MonoBehaviour {
 			Transform trans = hit.transform;
 			Debug.Log("Clicked on=" + trans.gameObject.name);
 			
-			if (trans.gameObject.name == "Army") {
-				clickedOnArmy(trans);
+            if (trans.gameObject.name.StartsWith("Army")) {
+                MasterController.ClickedOnArmy(trans);
+				//clickedOnArmy(trans);
 			}
 			else {
 				//GameObject parent = trans.parent.gameObject;
@@ -358,6 +361,8 @@ public class GUIScript : MonoBehaviour {
 		this.plotLineVisible = false;
 	}
 
+
+    [System.Obsolete("Moved to MasterController")]
 	private void clickedOnArmy(Transform trans) {
 		currentArmy = ObjectCache.getArmyFromGO(trans.gameObject);
 		guiMode = GUIMode.ARMY_DETAIL;
@@ -379,7 +384,7 @@ public class GUIScript : MonoBehaviour {
 
 		armyArray = Requester.getTownInfo(this.currentTown.Id, this.currentTown.GameObject );
 
-		CastleWindowScript.GetInstance().Show (this.currentTown.Name, armyArray);
+		//CastleWindowScript.GetInstance().Show (this.currentTown.Name, armyArray);
 
 	}
 	

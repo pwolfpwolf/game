@@ -1,9 +1,9 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{A8BEDA56-BBCC-6973-B917-0F3AB48745E9}"
+# Visual Studio 2008
+
+Project("{43201AD5-4451-5049-1CEB-3EB5D4E48D8F}") = "Game3d", "Assembly-CSharp-firstpass.csproj", "{A8BEDA56-BBCC-6973-B917-0F3AB48745E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{0EDB0465-6680-E16C-F4DF-F4700C35AB25}"
+Project("{43201AD5-4451-5049-1CEB-3EB5D4E48D8F}") = "Game3d", "Assembly-CSharp.csproj", "{0EDB0465-6680-E16C-F4DF-F4700C35AB25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0EDB0465-6680-E16C-F4DF-F4700C35AB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EDB0465-6680-E16C-F4DF-F4700C35AB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EDB0465-6680-E16C-F4DF-F4700C35AB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EDB0465-6680-E16C-F4DF-F4700C35AB25}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A8BEDA56-BBCC-6973-B917-0F3AB48745E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8BEDA56-BBCC-6973-B917-0F3AB48745E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8BEDA56-BBCC-6973-B917-0F3AB48745E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8BEDA56-BBCC-6973-B917-0F3AB48745E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EDB0465-6680-E16C-F4DF-F4700C35AB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EDB0465-6680-E16C-F4DF-F4700C35AB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EDB0465-6680-E16C-F4DF-F4700C35AB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EDB0465-6680-E16C-F4DF-F4700C35AB25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
@@ -39,8 +42,5 @@ Global
 		$3.inheritsSet = Mono
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

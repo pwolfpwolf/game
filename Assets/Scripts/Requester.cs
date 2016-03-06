@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using SimpleJSON;
 using System.Collections.Generic;
 
@@ -307,6 +308,35 @@ public class Requester  {
 		return f / Globals.MAP2TERRAIN_MULT;
 	}
 
+    //-----------------------------------------------------------------------------------------
 
+    public static List<Unit> getUnits(string armyId) {
+
+        WWW request = new WWW(Globals.REQUEST_URL + "type=armyUnits&id=" + armyId +
+            "&playerId=" + Globals.playerId); 
+
+        while (! request.isDone) {} ;
+
+        List<Unit> unitList = new List<Unit>();
+
+        JSONNode units = JSONNode.Parse(request.text);
+
+        Debug.Log("result=" + request.text);
+
+        JSONArray unitsArray = units["UNITS"].AsArray;
+        foreach (JSONNode obj in unitsArray) {
+            Debug.Log("MEN=" + obj["MEN"]);
+
+            Unit unit = new Unit(
+                obj["UNITID"],
+                obj["UNITTYPE"],
+                Int32.Parse(obj["MEN"]),
+                obj["EXPERIENCE"] );
+
+            unitList.Add(unit);
+        }
+
+        return unitList;
+    }
 
 }
